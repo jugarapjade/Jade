@@ -1,6 +1,6 @@
-!@@@CORE SWITCH SA TAAS
+0!@@@CORE SWITCH SA TAAS
 config t
-   hostname COREtaas_
+   hostname COREtaas21
    enable secret pass
    service password-encryption
    no logging console
@@ -15,19 +15,19 @@ config t
       exec-timeout 0 0
    Int Vlan 1
      no shutdown
-	 ip add 10._.1.2 255.255.255.0
+	 ip add 10.21.1.2 255.255.255.0
 	 description MGMTDATA
    Int Vlan 10
      no shutdown
-	 ip add 10._.10.2 255.255.255.0
+	 ip add 10.21.10.2 255.255.255.0
 	 description WIRELESS
    Int Vlan 50
      no shutdown
-	 ip add 10._.50.2 255.255.255.0
+	 ip add 10.21.50.2 255.255.255.0
 	 description IPCCTV
    Int Vlan 100
      no shutdown
-	 ip add 10._.100.2 255.255.255.0
+	 ip add 10.21.100.2 255.255.255.0
 	 description VOICEVLAN
 
 !@@@LeafSwitchONLY
@@ -48,10 +48,10 @@ config t
    Int Gi 0/1
      no shutdown
 	  no switchport
-	  ip add 10._._.4 255.255.255.0
+	  ip add 10.21._.4 255.255.255.0
    Int Vlan 1
      no shutdown
-	 ip add 10._.1.4 255.255.255.0
+	 ip add 10.21.1.4 255.255.255.0
 	 description MGMTDATA
    Int Vlan 10
      no shutdown
@@ -69,7 +69,7 @@ config t
 !DHCP: DYNAMIC HOST CONFIGURATION PROTOCOL
 !@@@LEAF SWITCH
 config t
-ip dhcp Excluded-add 10._.1.1 10._.1.100
+ip dhcp Excluded-add 10.21.1.1 10.21.1.100
 ip dhcp Excluded-add 10._.10.1 10._.10.100
 ip dhcp Excluded-add 10._.50.1 10._.50.100
 ip dhcp Excluded-add 10._.100.1 10._.100.100
