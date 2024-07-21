@@ -174,16 +174,16 @@ config t
 !!!CUCM ANALOG PHONES CONFIG
 configure terminal
 dial-peer voice 1 pots
-   destination-pattern _00
+   destination-pattern 2101
    port 0/0/0
 dial-peer voice 2 pots
-   destination-pattern _01
+   destination-pattern 2102
    port 0/0/1
 dial-peer voice 3 pots
-   destination-pattern _02
+   destination-pattern 2103
    port 0/0/2
 dial-peer voice 4 pots
-   destination-pattern _03
+   destination-pattern 2104
    port 0/0/3
 end
 
@@ -198,21 +198,21 @@ telephony-service
    ip source-address 10.21.100.8 port 2000
    create cnf-files
 ephone-dn 1
-  number _11
+  number 2111
 ephone-dn 2
-  number _22
+  number 2122
 ephone-dn 3
-  number _33
+  number 2133
 ephone-dn 4
-  number _44
+  number 2144
 ephone-dn 5
-  number _55
+  number 2155
 ephone-dn 6
-  number _66
+  number 2166
 ephone-dn 7
-  number _77
+  number 2177
 ephone-dn 8
-  number _88	
+  number 2188	
 Ephone 1
   Mac-address ccd8.c1fb.12ff
   type 8945
