@@ -213,6 +213,10 @@ ephone-dn 7
   number 2177
 ephone-dn 8
   number 2188	
+ephone-dn 9
+  number 2199
+ephone-dn 10
+  number 2198
 Ephone 1
   Mac-address ccd8.c1fb.12ff
   type 8945
